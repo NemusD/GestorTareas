@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestor de Tareas</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Ingreso de tarea-->
+        <form>
+          <div class="form-group">
+            <label for="title">Título de la tarea</label>
+            <input type="text" class="form-control" id="title" placeholder="Ingresar título">
+          </div>
+          <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea class="form-control" name="" id="description" cols="30" rows="3" placeholder="Ingresar descripción de tarea"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="status">Estado</label>
+            <select class="form-control" id="status">
+              <option value="">Pendiente</option>
+              <option value="">Iniciado</option>
+              <option value="">Completada</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="assignee">Asignar a:</label>
+            <input type="text" class="form-control" id="assignee" placeholder=" Nombre Responsable">
+          </div>
+          <button type="submit" class="btn btn-primary">Agregar Tarea</button>
+        </form>
+      </div>
+        <div class="col-md-6">
+          <section>
+            <!-- Listado de tareas -->
+          <h2>Lista de Tarea</h2>
+            <ul class="list-group" id="task-list">
+  
+            </ul>
+          </section>
+          
+        </div>
+    </div>
+  </div>
+  <!-- Scripts de Bootstrap y JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="../routes/taskRoutes.js"></script>
+</body>
+</html>
