@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// Configuración del middleware para servir archivos estáticos desde la carpeta 'public'
+// Configuración del middleware 
 app.use(express.static('public'));
 
-// Ruta de ejemplo
+// Ruta
 app.get('/', (req, res) => {
   res.send('¡Hola, mundo!');
 });
